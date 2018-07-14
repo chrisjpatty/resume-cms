@@ -3,13 +3,13 @@ const klaw = require('klaw')
 const path = require('path')
 const matter = require('gray-matter')
 
-function getPosts () {
+function getBlocks () {
   const items = []
   // Walk ("klaw") through posts directory and push file paths into items array //
   const getFiles = () => new Promise(resolve => {
     // Check if posts directory exists //
-    if (fs.existsSync('./src/posts')) {
-      klaw('./src/posts')
+    if (fs.existsSync('./src/blocks')) {
+      klaw('./src/blocks')
         .on('data', item => {
           // Filter function to retrieve .md files //
           if (path.extname(item.path) === '.md') {
@@ -66,7 +66,7 @@ export default {
     title: 'React Static with Netlify CMS',
   }),
   getRoutes: async () => {
-    const posts = await getPosts()
+    const blocks = await getBlocks()
     const theme = await getTheme()
     const header = await getHeader()
     return [
@@ -74,25 +74,25 @@ export default {
         path: '/',
         component: 'src/containers/Home',
         getData: () => ({
-          posts,
+          blocks,
           theme,
           header
         })
       },
-      {
-        path: '/blog',
-        component: 'src/containers/Blog',
-        getData: () => ({
-          posts
-        }),
-        children: posts.map(post => ({
-          path: `/post/${post.data.slug}`,
-          component: 'src/containers/Post',
-          getData: () => ({
-            post
-          }),
-        })),
-      },
+      // {
+      //   path: '/blog',
+      //   component: 'src/containers/Blog',
+      //   getData: () => ({
+      //     posts
+      //   }),
+      //   children: posts.map(post => ({
+      //     path: `/post/${post.data.slug}`,
+      //     component: 'src/containers/Post',
+      //     getData: () => ({
+      //       post
+      //     }),
+      //   })),
+      // },
       {
         is404: true,
         component: 'src/containers/404',
