@@ -9,6 +9,8 @@ module.exports = {
     'semi': 0,
     'quotes': 0,
     'react/self-closing-comp': 0,
-    'no-trailing-spaces': 0
+    'no-trailing-spaces': 0,
+    'eol-last': 0,
+    'no-multi-spaces': 0
   }
 }
