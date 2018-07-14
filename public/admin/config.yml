@@ -40,5 +40,6 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: 'hidden', default: "Header"}
       - {label: "Full Name", name: 'fullName', widget: "string"}
+      - {label: "Profile Image", name: "profileUrl", widget: 'image'}
       - {label: "[Optional] Short & Snappy Headline", name: 'subtitle', widget: "string"}
       - {label: "[Optional] A Longer bio", name: 'biography', widget: "markdown"}
