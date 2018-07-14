@@ -53,10 +53,11 @@ collections:
       - label: "Content Type"
         name: 'type'
         widget: "select"
+        required: true
         options:
           - { label: "Section Label", value: "sectionLabel" }
           - { label: "Event", value: "event" }
-      - {label: "Title", name: "title", widget: 'string', default: ""}
-      - {label: "Date (Used to order your content blocks)", name: 'date', widget: "date"}
-      - {label: "Display Date (Displayed on the content block)", name: "displayDate", widget: 'string'}
-      - {label: "Paragraph", name: 'paragraph', widget: "markdown"}
+      - {label: "Title", name: "title", widget: 'string', default: "", required: true}
+      - {label: "Date (Used to order your content blocks)", name: 'date', widget: "date", required: true}
+      - {label: "Display Date (Displayed on the content block)", name: "displayDate", widget: 'string', required: false}
+      - {label: "Paragraph", name: 'paragraph', widget: "markdown", required: false}
