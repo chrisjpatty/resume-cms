@@ -12,6 +12,8 @@ module.exports = {
     'no-trailing-spaces': 0,
     'eol-last': 0,
     'no-multi-spaces': 0,
-    'object-curly-spacing': 0
+    'object-curly-spacing': 0,
+    'no-floating-decimal': 0,
+    'react/jsx-tag-spacing': 0
   }
 }

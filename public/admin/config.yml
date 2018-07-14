@@ -43,3 +43,20 @@ collections:
       - {label: "Profile Image", name: "profileUrl", widget: 'image'}
       - {label: "[Optional] Short & Snappy Headline", name: 'subtitle', widget: "string"}
       - {label: "[Optional] A Longer bio", name: 'biography', widget: "markdown"}
+
+  - name: "blocks"
+    label: "Content Blocks"
+    folder: "src/blocks"
+    create: true
+    slug: "{{slug}}-{{year}}-{{month}}={{day}}"
+    fields:
+      - label: "Content Type"
+        name: 'type'
+        widget: "select"
+        options:
+          - { label: "Section Label", value: "sectionLabel" }
+          - { label: "Event", value: "event" }
+      - {label: "Title", name: "title", widget: 'string', default: ""}
+      - {label: "Date (Used to order your content blocks)", name: 'date', widget: "date"}
+      - {label: "Display Date (Displayed on the content block)", name: "displayDate", widget: 'string'}
+      - {label: "Paragraph", name: 'paragraph', widget: "markdown"}

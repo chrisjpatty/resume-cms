@@ -1,5 +1,5 @@
-import React from 'react'
-import { Router } from 'react-static'
+import React, { Fragment } from 'react'
+import { Router, Head } from 'react-static'
 import { hot } from 'react-hot-loader'
 //
 import Routes from 'react-static-routes'
@@ -8,7 +8,12 @@ import './app.css'
 
 const App = () => (
   <Router>
-    <Routes />
+    <Fragment>
+      <Head>
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700" rel="stylesheet"/>
+      </Head>
+      <Routes />
+    </Fragment>
   </Router>
 )
 
