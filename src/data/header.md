@@ -1,7 +1,7 @@
 ---
 title: Header
-fullName: John Doe
-profileUrl: /uploads/screen-shot-2018-07-13-at-7.38.14-pm.png
+fullName: Chris Patty
+profileUrl: /uploads/18449321_10154977868662400_4923251819861183213_o.jpg
 subtitle: A short and snappy subtitle goes here
 biography: >-
   Lorem ipsum dolor amet leggings cray retro, authentic bespoke portland celiac
