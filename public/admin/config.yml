@@ -31,3 +31,14 @@ collections:
       - {label: "Text Color on Primary Color", name: 'primaryColor', widget: "string"}
       - {label: "Secondary Color", name: 'secondaryColor', widget: "string"}
       - {label: "Text Color on Secondary Color", name: 'textOnSecondaryColor', widget: "string"}
+
+  - name: "header"
+    label: "Header"
+    folder: "src/data"
+    create: false
+    slug: "header"
+    fields:
+      - {label: "Title", name: "title", widget: 'hidden', default: "Header"}
+      - {label: "Full Name", name: 'fullName', widget: "string"}
+      - {label: "[Optional] Short & Snappy Headline", name: 'subtitle', widget: "string"}
+      - {label: "[Optional] A Longer bio", name: 'biography', widget: "markdown"}

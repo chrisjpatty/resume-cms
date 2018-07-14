@@ -50,6 +50,16 @@ const getTheme = () => new Promise((resolve, reject) => {
   }
 })
 
+const getHeader = () => new Promise((resolve, reject) => {
+  if (fs.existsSync('./src/data')) {
+    const header = fs.readFileSync('./src/data/header.md', 'utf8')
+    const parsed = matter(header)
+    resolve(Object.assign({}, parsed.data, {content: parsed.content}))
+  } else {
+    resolve({})
+  }
+})
+
 export default {
 
   getSiteData: () => ({
@@ -58,13 +68,15 @@ export default {
   getRoutes: async () => {
     const posts = await getPosts()
     const theme = await getTheme()
+    const header = await getHeader()
     return [
       {
         path: '/',
         component: 'src/containers/Home',
         getData: () => ({
           posts,
-          theme
+          theme,
+          header
         })
       },
       {

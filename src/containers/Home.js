@@ -10,11 +10,11 @@ const PageWrapper = styled('div')({
 
 class Home extends React.Component{
   render(){
-    const { theme } = this.props;
+    const { theme, header } = this.props;
     return(
       <ThemeProvider theme={theme}>
         <PageWrapper>
-          <HeroHeader  />
+          <HeroHeader header={header} />
         </PageWrapper>
       </ThemeProvider>
     )

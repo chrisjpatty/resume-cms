@@ -11,6 +11,7 @@ module.exports = {
     'react/self-closing-comp': 0,
     'no-trailing-spaces': 0,
     'eol-last': 0,
-    'no-multi-spaces': 0
+    'no-multi-spaces': 0,
+    'object-curly-spacing': 0
   }
 }
