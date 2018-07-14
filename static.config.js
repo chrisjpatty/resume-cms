@@ -41,6 +41,15 @@ function getPosts () {
   return getFiles()
 }
 
+const getTheme = () => new Promise((resolve, reject) => {
+  if (fs.existsSync('./src/theme')) {
+    const theme = fs.readFileSync('./src/theme/theme.md', 'utf8')
+    resolve(matter(theme).data)
+  } else {
+    resolve({})
+  }
+})
+
 export default {
 
   getSiteData: () => ({
@@ -48,26 +57,27 @@ export default {
   }),
   getRoutes: async () => {
     const posts = await getPosts()
+    const theme = await getTheme()
     return [
       {
         path: '/',
         component: 'src/containers/Home',
-      },
-      {
-        path: '/about',
-        component: 'src/containers/About',
+        getData: () => ({
+          posts,
+          theme
+        })
       },
       {
         path: '/blog',
         component: 'src/containers/Blog',
         getData: () => ({
-          posts,
+          posts
         }),
         children: posts.map(post => ({
           path: `/post/${post.data.slug}`,
           component: 'src/containers/Post',
           getData: () => ({
-            post,
+            post
           }),
         })),
       },
@@ -77,4 +87,5 @@ export default {
       },
     ]
   },
+  plugins: ['react-static-plugin-emotion']
 }

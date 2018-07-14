@@ -1,11 +1,21 @@
 import React from 'react'
-import { withSiteData } from 'react-static'
-//
-import logoImg from '../logo.png'
+import { withSiteData, withRouteData } from 'react-static'
+import styled from 'react-emotion'
 
-export default withSiteData(() => (
-  <div>
-    <h1 style={{ textAlign: 'center' }}>Welcome to</h1>
-    <img src={logoImg} alt="" />
-  </div>
-))
+const PageWrapper = styled('div')({
+  display: 'flex',
+  flexDirection: 'column'
+})
+
+class Home extends React.Component{
+  render(){
+    console.log(this.props)
+    return(
+      <PageWrapper>
+        Home page
+      </PageWrapper>
+    )
+  }
+}
+
+export default withRouteData(withSiteData(Home))

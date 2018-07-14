@@ -11,7 +11,7 @@ collections:
     folder: "src/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter. 
+    fields: # The fields for each document, usually in front matter.
     # Remove any that aren't needed for posts
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
@@ -19,3 +19,16 @@ collections:
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
       - {label: "Body", name: "body", widget: "markdown"}
+
+collections:
+  - name: "theme"
+    label: "Theme"
+    folder: "src/theme"
+    create: false
+    slug: "theme"
+    fields:
+      - {label: "Title", name: "title", widget: 'hidden', default: "Theme"}
+      - {label: "Primary Color", name: 'primaryColor', widget: "string"}
+      - {label: "Text Color on Primary Color", name: 'primaryColor', widget: "string"}
+      - {label: "Secondary Color", name: 'secondaryColor', widget: "string"}
+      - {label: "Text Color on Secondary Color", name: 'textOnSecondaryColor', widget: "string"}
