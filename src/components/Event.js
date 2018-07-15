@@ -13,21 +13,37 @@ const Title = styled('h3')({
   padding: 0
 })
 
-const Paragraph = styled('p')({
-  
+const Content = styled('p')({
+  margin: 0,
+  padding: 0
+})
+
+const TitleWrapper = styled('div')({
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center'
+})
+
+const StyledDate = styled('span')({
+  fontStyle: 'italic',
+  marginLeft: 'auto',
+  fontWeight: 700
 })
 
 export default class Event extends React.Component{
   render(){
-    const { title, paragraph } = this.props;
+    const { title, date, content } = this.props;
     return(
       <Wrapper>
-        <Title>{title}</Title>
+        <TitleWrapper>
+          <Title>{title}</Title>
+          <StyledDate>{date}</StyledDate>
+        </TitleWrapper>
         {
-          paragraph &&
-          <Paragraph>
-            {paragraph}
-          </Paragraph>
+          content &&
+          <Content>
+            {content}
+          </Content>
         }
       </Wrapper>
     )
