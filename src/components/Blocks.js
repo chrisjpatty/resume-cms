@@ -7,7 +7,8 @@ const BlocksWrapper = styled('div')({
   width: '100%',
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'center'
+  alignItems: 'center',
+  paddingBottom: 50
 })
 
 const BlockWrapper = styled('div')({

@@ -1,21 +1,29 @@
 import React from 'react'
 import styled from 'react-emotion'
+import Markdown from 'react-markdown'
 
 const Wrapper = styled('div')({
   background: '#fff',
-  padding: 20
+  padding: 20,
+  minWidth: 450,
+  maxWidth: 450
 }, ({theme}) => ({
   boxShadow: theme.shadows.high
 }))
 
 const Title = styled('h3')({
   margin: 0,
+  marginRight: 15,
   padding: 0
 })
 
-const Content = styled('p')({
+const Content = styled('div')({
   margin: 0,
-  padding: 0
+  padding: 0,
+  '& p': {
+    margin: 0,
+    paddingTop: 10
+  }
 })
 
 const TitleWrapper = styled('div')({
@@ -42,7 +50,7 @@ export default class Event extends React.Component{
         {
           content &&
           <Content>
-            {content}
+            <Markdown source={content} escapeHtml />
           </Content>
         }
       </Wrapper>
