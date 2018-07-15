@@ -1,5 +1,6 @@
 ---
 type: sectionLabel
 title: Education
-order: 1
+date: 1
 ---
+
