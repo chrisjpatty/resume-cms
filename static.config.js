@@ -2,6 +2,7 @@ const fs = require('fs')
 const klaw = require('klaw')
 const path = require('path')
 const matter = require('gray-matter')
+const orderBy = require('lodash/orderBy')
 
 function getBlocks () {
   const items = []
@@ -31,7 +32,8 @@ function getBlocks () {
         .on('end', () => {
           // Resolve promise for async getRoutes request //
           // posts = items for below routes //
-          resolve(items)
+          const orderedItems = orderBy(items, ['order'])
+          resolve(orderedItems)
         })
     } else {
       // If src/posts directory doesn't exist, return items as empty array //
