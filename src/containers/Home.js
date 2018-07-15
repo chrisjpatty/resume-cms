@@ -3,19 +3,20 @@ import { withSiteData, withRouteData } from 'react-static'
 import styled from 'react-emotion'
 import { ThemeProvider } from 'emotion-theming'
 import HeroHeader from '../components/HeroHeader'
-import Events from '../components/Events'
+import Blocks from '../components/Blocks'
 import globalTheme from '../theme'
 
 const PageWrapper = styled('div')({})
 
 class Home extends React.Component {
   render() {
-    const { theme, header, events } = this.props
+    const { theme, header, blocks } = this.props;
+    console.log(blocks);
     return (
       <ThemeProvider theme={{ ...globalTheme, ...theme }}>
         <PageWrapper>
           <HeroHeader header={header} />
-          <Events events={events} />
+          <Blocks blocks={blocks} />
         </PageWrapper>
       </ThemeProvider>
     )

@@ -119,7 +119,7 @@ export default class HeroHeader extends React.Component{
   render(){
     const { header } = this.props;
     const { profileUrl, fullName, subtitle } = header;
-    console.log(header);
+    // console.log(header);
     return(
       <Wrapper>
         <ContentWrapper>
