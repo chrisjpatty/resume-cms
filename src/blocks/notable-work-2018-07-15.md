@@ -1,6 +1,6 @@
 ---
 type: sectionLabel
 title: Notable Work
-date: 6
+order: 6
 ---
 

@@ -14,6 +14,10 @@ module.exports = {
     'no-multi-spaces': 0,
     'object-curly-spacing': 0,
     'no-floating-decimal': 0,
-    'react/jsx-tag-spacing': 0
+    'react/jsx-tag-spacing': 0,
+    'max-len': 0,
+    'object-curly-newline': 0,
+    'import/first': 0,
+    'jsx-quotes': 0
   }
 }

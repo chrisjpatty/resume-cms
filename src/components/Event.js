@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'react-emotion'
 import Markdown from 'react-markdown'
 
-const Wrapper = styled('div')({
+export const Wrapper = styled('div')({
   background: '#fff',
   padding: 20,
   minWidth: 450,
@@ -12,13 +12,13 @@ const Wrapper = styled('div')({
   boxShadow: theme.shadows.high
 }))
 
-const Title = styled('h3')({
+export const Title = styled('h3')({
   margin: 0,
   marginRight: 15,
   padding: 0
 })
 
-const Content = styled('div')({
+export const Content = styled('div')({
   margin: 0,
   padding: 0,
   '& p': {
