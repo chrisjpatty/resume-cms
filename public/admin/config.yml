@@ -48,6 +48,7 @@ collections:
       - {label: "Title", name: "title", widget: 'string', default: "", required: true}
       - {label: "Display Order (Used to order your content blocks)", name: 'order', widget: "number", valueType: "int", required: true}
       - {label: "Display Date (Displayed on the content block)", name: "displayDate", widget: 'string', required: false}
+      - {label: "[Optional] Link URL", name: "href", widget: "string"}
       - {label: "Content", name: 'content', widget: "markdown", required: false}
       - {label: "Image (Only applies to image blocks)", name: "imageURL", widget: 'image'}
       - label: "Image Layout (Only applies to image blocks)"
