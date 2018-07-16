@@ -44,7 +44,9 @@ collections:
         options:
           - { label: "Section Label", value: "sectionLabel" }
           - { label: "Event", value: "event" }
+          - { label: "Photo Block", value: "photo" }
       - {label: "Title", name: "title", widget: 'string', default: "", required: true}
       - {label: "Display Order (Used to order your content blocks)", name: 'order', widget: "number", valueType: "int", required: true}
       - {label: "Display Date (Displayed on the content block)", name: "displayDate", widget: 'string', required: false}
       - {label: "Content", name: 'content', widget: "markdown", required: false}
+      - {label: "Photo Layout (Only applies to photo blocks)", name: "photoURL", widget: 'image'}

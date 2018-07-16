@@ -32,7 +32,7 @@ function getBlocks () {
         .on('end', () => {
           // Resolve promise for async getRoutes request //
           // posts = items for below routes //
-          const orderedItems = orderBy(items, ['order'])
+          const orderedItems = orderBy(items, ['date'])
           resolve(orderedItems)
         })
     } else {

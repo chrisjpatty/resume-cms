@@ -6,7 +6,8 @@ const Wrapper = styled('div')({
   background: '#fff',
   padding: 20,
   minWidth: 450,
-  maxWidth: 450
+  maxWidth: 450,
+  marginBottom: 1
 }, ({theme}) => ({
   boxShadow: theme.shadows.high
 }))
