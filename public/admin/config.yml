@@ -42,11 +42,18 @@ collections:
         widget: "select"
         required: true
         options:
-          - { label: "Section Label", value: "sectionLabel" }
-          - { label: "Event", value: "event" }
-          - { label: "Photo Block", value: "photo" }
+          - {label: "Section Label", value: "sectionLabel"}
+          - {label: "Event", value: "event"}
+          - {label: "Image Block", value: "image"}
       - {label: "Title", name: "title", widget: 'string', default: "", required: true}
       - {label: "Display Order (Used to order your content blocks)", name: 'order', widget: "number", valueType: "int", required: true}
       - {label: "Display Date (Displayed on the content block)", name: "displayDate", widget: 'string', required: false}
       - {label: "Content", name: 'content', widget: "markdown", required: false}
-      - {label: "Photo Layout (Only applies to photo blocks)", name: "photoURL", widget: 'image'}
+      - {label: "Image (Only applies to image blocks)", name: "imageURL", widget: 'image'}
+      - label: "Image Layout (Only applies to image blocks)"
+        name: "imageLayout"
+        widget: "select"
+        options:
+          - {label: "Left Thumbnail", value: "leftThumb"}
+          - {label: "Right Thumbnail", value: "rightThumb"}
+          - {label: "Full Width", value: "fullWidth"}
