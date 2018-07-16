@@ -12,7 +12,7 @@ const wrapperOverrides = css({
 
 const Thumb = styled('div')({
   width: 120,
-  height: 120,
+  minHeight: 120,
   flex: '0 0 auto',
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
