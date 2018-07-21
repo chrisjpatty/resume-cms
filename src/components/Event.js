@@ -9,7 +9,16 @@ export const Wrapper = styled('div')({
   maxWidth: 450,
   marginBottom: 1
 }, ({theme}) => ({
-  boxShadow: theme.shadows.high
+  boxShadow: theme.shadows.high,
+  [theme.media.xs]: {
+    padding: 15,
+    boxShadow: theme.shadows.mid,
+    width: '100%',
+    maxWidth: 'none',
+    // marginBottom: 0,
+    borderTop: `1px solid ${theme.gray.extraExtraLight}`,
+    minWidth: 'auto'
+  }
 }))
 
 export const Title = styled('h3')({
@@ -30,13 +39,15 @@ export const Content = styled('div')({
 const TitleWrapper = styled('div')({
   display: 'flex',
   flexDirection: 'row',
-  alignItems: 'center'
+  // alignItems: 'center'
 })
 
 const StyledDate = styled('span')({
   fontStyle: 'italic',
   marginLeft: 'auto',
-  fontWeight: 700
+  fontWeight: 700,
+  marginTop: 2,
+  whiteSpace: 'nowrap'
 })
 
 export default class Event extends React.Component{

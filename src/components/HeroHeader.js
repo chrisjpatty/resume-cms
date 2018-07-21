@@ -105,7 +105,11 @@ const CircularProfileImage = styled('div')({
   border: '7px solid #fff'
 }, ({profileUrl, theme}) => ({
   backgroundImage: `url(${profileUrl})`,
-  boxShadow: theme.shadows.high
+  boxShadow: theme.shadows.high,
+  [theme.media.xs]: {
+    width: '50vw',
+    height: '50vw'
+  }
 }))
 
 const Subtitle = styled('span')({

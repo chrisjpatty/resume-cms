@@ -5,7 +5,7 @@ import { Wrapper, Title, Content } from './Event'
 import Markdown from 'react-markdown'
 
 const wrapperOverrides = css({
-  padding: 0,
+  padding: '0px !important',
   display: 'flex',
   flexDirection: 'row'
 })
@@ -17,6 +17,7 @@ const Thumb = styled('div')({
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center',
+  // alignSelf: 'center'
 }, ({imageURL}) => ({
   backgroundImage: `url(${imageURL})`
 }))
@@ -25,7 +26,11 @@ const ContentWrapper = styled('div')({
   display: 'flex',
   flexDirection: 'column',
   padding: 20
-})
+}, ({theme}) => ({
+  [theme.media.xs]: {
+    padding: 15
+  }
+}))
 
 export default class ImageBlock extends React.Component{
   render(){

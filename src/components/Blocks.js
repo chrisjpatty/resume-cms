@@ -10,9 +10,18 @@ const BlocksWrapper = styled('div')({
   flexDirection: 'column',
   alignItems: 'center',
   paddingBottom: 50
-})
+}, ({theme}) => ({
+  [theme.media.xs]: {
+    paddingLeft: 15,
+    paddingRight: 15
+  }
+}))
 
-const BlockWrapper = styled('div')({})
+const BlockWrapper = styled('div')(({theme}) => ({
+  [theme.media.xs]: {
+    width: '100%'
+  }
+}))
 
 const Link = styled('a')({
   textDecoration: 'none',

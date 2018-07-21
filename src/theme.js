@@ -15,6 +15,7 @@ export default {
     high: '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)'
   },
   media: {
-    sm: '@media(max-width: 860px)'
+    sm: '@media(max-width: 860px)',
+    xs: '@media(max-width: 600px)'
   }
 }
