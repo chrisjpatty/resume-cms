@@ -116,7 +116,8 @@ const Subtitle = styled('span')({
   width: '100%',
   fontStyle: 'italic',
   fontSize: 18,
-  marginTop: 5
+  marginTop: 5,
+  textAlign: 'center'
 })
 
 export default class HeroHeader extends React.Component{
